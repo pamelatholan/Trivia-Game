@@ -61,6 +61,58 @@ var options = [
         answer: 0,
         photo: "assets/images/mithrandir.gif"
     }];
+
+    var correctCount = 0;
+    var wrongCount = 0;
+    var unansweredCount = 0;
+    var timer = 15;
+    var intervalId;
+    var userGuess = "";
+    var running = false;
+    var qCount = options.length;
+    var pick;
+    var index;
+    var newArray = [];
+    var holder = [];
+
+
+    $("#reset").hide();
+
+    $("#start").on("click", function() {
+        $("#start").hide();
+        displayQuestion();
+        runTimer();
+        for(var i = 0; i < options.length; i++) {
+            holder.push(options[i]);
+        }
+    })
+
+    //Start Timer
+    function runTimer() {
+        if(!running) {
+            intervalId = setInterval(decrement, 1000);
+            running = true;
+        }
+    }
+
+    //Timer Countdown
+    function decrement() {
+        $("#timeleft").html("<h3>Time Remaining: " + timer + "</h3>");
+        timer --;
+        //stop timer if reach 0
+        if(timer === 0) {
+            unansweredCount++;
+            stop();
+            $("#answerblock").html("<p>Time's up! The correct answer is: " + pick.choice[pick.answer] + "</p>");
+            hidepicture();
+        }
+    }
+
+    //Timer Stop
+    function stop() {
+        running = false;
+        clearInterval(intervalId);
+    }
     
 
 
