@@ -133,6 +133,29 @@ var options = [
             $("#answerblock").append(userChoice);
         }
     }
+
+    //Select answer and outcome
+    $(".answerChoice").on("click", function () {
+        userGuess = parseInt($(this).attr("data-guessvalue"));
+        if(userGuess === pick.answer) {
+            stop();
+            correctCount++;
+            userGuess="";
+            $("#answerblock").html("<p>Correct!</p>");
+            hidepicture();
+
+        } else {
+            stop();
+            wrongCount++;
+            userGuess="";
+            $("#answerblock").html("<p>Wrong! The correct answer is: " + pick.choice[pick.answer] + "</p>");
+            hidepicture();
+        }
+        
+    })
+    
+   
+
     
 
 
