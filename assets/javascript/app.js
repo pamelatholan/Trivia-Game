@@ -113,6 +113,26 @@ var options = [
         running = false;
         clearInterval(intervalId);
     }
+
+    //Randomly pick question. Display, loop through and display possible answers
+    function displayQuestion() {
+        index = Math.floor(Math.random() * options.length);
+        pick = options[index];
+        if(pick.shown) {
+            displayQuestion();
+        } else {
+            // console.log(pick.question);
+        }
+        $("#questionblock").html("<h2>" + pick.question + "</h2>");
+        for(var i = 0; i < pick.choice.length; i++) {
+            var userChoice = $("#<div>");
+            userChoice.addClass("answerChoice");
+            userChoice.html(pick.choice[i]);
+            //check answer
+            userChoice.attr("data-guessvalue", i);
+            $("#answerblock").append(userChoice);
+        }
+    }
     
 
 
