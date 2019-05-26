@@ -154,6 +154,7 @@ var options = [
         
     })
     
+    
     function hidepicture() {
         $("#answerblock").append("<img src=" + pick.photo + ">");
         newArray.push(pick);
@@ -178,7 +179,7 @@ var options = [
                 runTimer();
                 displayQuestion();
             }
-        }, 3000);
+        }, 6000);
     }
 
     $("#reset").on("click", function() {
