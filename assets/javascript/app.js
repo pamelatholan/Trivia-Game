@@ -126,7 +126,7 @@ var options = [
         $("#questionblock").html("<h2>" + pick.question + "</h2>");
         for(var i = 0; i < pick.choice.length; i++) {
             var userChoice = $("<div>");
-            userChoice.addClass("#answerChoice");
+            userChoice.addClass("answerchoice");
             userChoice.html(pick.choice[i]);
             //check answer
             userChoice.attr("data-guessvalue", i);
@@ -135,7 +135,7 @@ var options = [
     }
 
     //Select answer and outcome
-    $("#answerChoice").on("click", function () {
+    $(".answerchoice").on("click", function () {
         userGuess = parseInt($(this).attr("data-guessvalue"));
         if(userGuess === pick.answer) {
             stop();
