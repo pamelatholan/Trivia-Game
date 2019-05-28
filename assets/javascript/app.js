@@ -180,15 +180,15 @@ var options = [
         }, 5000);
     }
 // Could not get the reset function to work
-$("#reset").on("click", function() {
-	$("#reset").hide();
-	$("#answerblock").empty();
-	$("#questionblock").empty();
-	for(var i = 0; i < holder.length; i++) {
-		options.push(holder[i]);
-	}
-	runTimer();
-	displayQuestion();
+// $("#reset").on("click", function() {
+// 	$("#reset").hide();
+// 	$("#answerblock").empty();
+// 	$("#questionblock").empty();
+// 	for(var i = 0; i < holder.length; i++) {
+// 		options.push(holder[i]);
+// 	}
+// 	runTimer();
+// 	displayQuestion();
 
-})
+// })
 })
