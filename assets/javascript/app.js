@@ -65,7 +65,7 @@ var options = [
     var correctCount = 0;
     var wrongCount = 0;
     var unansweredCount = 0;
-    var timer = 15;
+    var timer = 10;
     var intervalId;
     var userGuess = "";
     var running = false;
@@ -76,7 +76,6 @@ var options = [
     var holder = [];
 
 
-    $("#reset").hide();
 
     $("#start").on("click", function() {
         $("#start").hide();
@@ -154,8 +153,6 @@ var options = [
     })        
 }  
     
-    
-    
     function hidepicture() {
         $("#answerblock").append("<img src=" + pick.photo + ">");
         newArray.push(pick);
@@ -163,7 +160,7 @@ var options = [
 
         var hidpic = setTimeout(function() {
             $("#answerblock").empty();
-            timer = 15;
+            timer = 10;
 
             //Score screen
             if((wrongCount + correctCount + unansweredCount) === qCount) {
@@ -177,20 +174,9 @@ var options = [
                 unansweredCount = 0;
 
             } else {
-                runTimer();
                 displayQuestion();
+                runTimer();
             }
-        }, 6000);
+        }, 5000);
     }
-
-    $("#reset").on("click", function() {
-        $("#reset").hide();
-        $("#answerblock").empty();
-        $("#questionblock").empty();
-        for( var i = 0; i < holder.length; i++) {
-            options.push(holder[i]);
-        }
-        runTimer();
-        displayQuestion();
-    })
 })
