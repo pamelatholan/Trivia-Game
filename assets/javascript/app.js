@@ -69,7 +69,7 @@ var options = [
     var intervalId;
     var userGuess = "";
     var running = false;
-    var qCount = 0;
+    var qCount = options.length;
     var pick;
     var index;
     var newArray = [];
@@ -118,11 +118,11 @@ var options = [
     function displayQuestion() {
         index = Math.floor(Math.random() * options.length);
         pick = options[index];
-        if(pick.shown) {
-            displayQuestion();
-        } else {
+        // if(pick.shown) {
+            // displayQuestion();
+        // } else {
             // console.log(pick.question);
-        }
+        // }
         $("#questionblock").html("<h2>" + pick.question + "</h2>");
         for(var i = 0; i < pick.choice.length; i++) {
             var userChoice = $("<div>");
@@ -132,7 +132,7 @@ var options = [
             userChoice.attr("data-guessvalue", i);
             $("#answerblock").append(userChoice);
         }
-    }
+    
 
     //Select answer and outcome
     $(".answerchoice").on("click", function () {
@@ -151,8 +151,9 @@ var options = [
             $("#answerblock").html("<p>Wrong! The correct answer is: " + pick.choice[pick.answer] + "</p>");
             hidepicture();
         }
-        
-    })
+    })        
+}  
+    
     
     
     function hidepicture() {
