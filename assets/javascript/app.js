@@ -75,7 +75,7 @@ var options = [
     var newArray = [];
     var holder = [];
 
-
+    $("#reset").hide();
 
     $("#start").on("click", function() {
         $("#start").hide();
@@ -140,7 +140,7 @@ var options = [
             stop();
             correctCount++;
             userGuess="";
-            $("#answerblock").html("<p>Correct!</p>");
+            $("#answerblock").html("<p>Correct! " + pick.choice[pick.answer] + "</p>");
             hidepicture();
 
         } else {
@@ -179,4 +179,16 @@ var options = [
             }
         }, 5000);
     }
+// Could not get the reset function to work
+$("#reset").on("click", function() {
+	$("#reset").hide();
+	$("#answerblock").empty();
+	$("#questionblock").empty();
+	for(var i = 0; i < holder.length; i++) {
+		options.push(holder[i]);
+	}
+	runTimer();
+	displayQuestion();
+
+})
 })

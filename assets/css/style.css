@@ -34,9 +34,11 @@ body {
 h1 {
   text-align: center;
   color: gold;
-  background: black; 
+  background: black;
   font-weight: bolder;
   padding: 20px;
+  margin-left: 500px;
+  margin-right: 500px;
   font-size: 60px;
 }
 
