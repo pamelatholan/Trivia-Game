@@ -1,5 +1,5 @@
 ## Trivia-Game
-## HW 4
+## HW 5
 * Trivia Game
 
 * Create a trivia game with timed questions
