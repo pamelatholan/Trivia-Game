@@ -73,18 +73,3 @@ h2, h3, h4 {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 600px) {
-
-  h1 {
-    text-align: center;
-    color: gold;
-    /* background: rgba(44, 44, 44, 0.7);
-    border: 2px solid black; */
-    font-weight: bolder;
-    padding: 10px;
-    margin-left: 250px;
-    margin-right: 250px;
-    font-size: 25px;
-  }
-  
-}
