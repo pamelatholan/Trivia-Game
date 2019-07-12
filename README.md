@@ -1,6 +1,4 @@
 ## Trivia-Game
-## HW 5
-* Trivia Game
 
 * Create a trivia game with timed questions
 * Display the questions one at a time
