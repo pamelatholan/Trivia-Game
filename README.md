@@ -1,16 +1,28 @@
-## Trivia-Game
+# Trivia-Game
 
-* Create a trivia game with timed questions
-* Display the questions one at a time
+Deployed on [GitHub Pages](https://pamelatholan.github.io/Trivia-Game/)
 
-![LoTR](https://github.com/pamelatholan/Trivia-Game/blob/master/assets/images/LoTR.PNG)
-* If the player selects the correct answer, show a screen stating they are correct with a corresponding GIF and then move onto the next question after a few seconds without any user input.
+A Lord of the Rings themed timed trivia game.  Answer 10 questions to test your knowledge of LoTR.
 
-![Correct](https://github.com/pamelatholan/Trivia-Game/blob/master/assets/images/correct.PNG)
-* If the player selects the incorrect answer, show a screen with the correct answer and corresponding GIF and then move onto the next question after a few seconds without any user input.
+### How To Play:
+* Click the "Start Game" button
+* Select an answer
+    * If the player selects the correct answer, show a screen stating they are correct with a corresponding GIF and then move onto the next question after a few seconds without any user input.
+    * If the player selects the incorrect answer, show a screen with the correct answer and corresponding GIF and then move onto the next question after a few seconds without any user input.
+* After all questions have been answered, a score screen will populate with game stats
+    * Correct
+    * Incorrect
+    * Unanswered
 
-![Incorrect](https://github.com/pamelatholan/Trivia-Game/blob/master/assets/images/incorrect.PNG)
-* After all questions have been answered, show a score screen with how well the player did.
+### Tools/Languages Used:
+* HTML
+* CSS
+* Javascript
+* GoogleFonts
+* Bootstrap
+* JQuery
 
-![Score](https://github.com/pamelatholan/Trivia-Game/blob/master/assets/images/score.PNG)
-
+### Future Improvements:
+* Mobile responsiveness
+* Add music
+* Make time limit longer

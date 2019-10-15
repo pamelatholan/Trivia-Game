@@ -65,7 +65,7 @@ var options = [
     var correctCount = 0;
     var wrongCount = 0;
     var unansweredCount = 0;
-    var timer = 10;
+    var timer = 20;
     var intervalId;
     var userGuess = "";
     var running = false;
@@ -75,16 +75,32 @@ var options = [
     var newArray = [];
     var holder = [];
 
-    $("#reset").hide();
-
-    $("#start").on("click", function() {
-        $("#start").hide();
+    $("#startBtn").on("click", function() {
+        $(this).hide();
         displayQuestion();
         runTimer();
         for(var i = 0; i < options.length; i++) {
             holder.push(options[i]);
         }
-    })
+        // newGame();
+    });
+
+    $("#startOverBtn").on("click", function(){
+        $(this).hide();
+        newGame();
+    });
+
+    function newGame(){
+        $("#questionblock").empty();
+        $("#questionblock").html("<h3>Game Over! Here's how you did: </h3>");
+        $("#answerblock").append("<h4> Correct: " + correctCount + "</h4>");
+        $("#answerblock").append("<h4> Incorrect: " + wrongCount + "</h4>");
+        $("#answerblock").append("<h4> Unanswered: " + unansweredCount + "</h4>");
+        correctCount = 0;
+        wrongCount = 0;
+        unansweredCount = 0;
+        displayQuestion();
+    }
 
     //Start Timer
     function runTimer() {
@@ -160,7 +176,7 @@ var options = [
 
         var hidpic = setTimeout(function() {
             $("#answerblock").empty();
-            timer = 10;
+            timer = 15;
 
             //Score screen
             if((wrongCount + correctCount + unansweredCount) === qCount) {
@@ -172,7 +188,11 @@ var options = [
                 correctCount = 0;
                 wrongCount = 0;
                 unansweredCount = 0;
-
+                $('#startOverBtn').addClass('reset');
+                $('#startOverBtn').show();
+                $('#startOverBtn').html("PLAY AGAIN");
+    
+                
             } else {
                 displayQuestion();
                 runTimer();
@@ -180,15 +200,15 @@ var options = [
         }, 5000);
     }
 // Could not get the reset function to work
-// $("#reset").on("click", function() {
-// 	$("#reset").hide();
-// 	$("#answerblock").empty();
-// 	$("#questionblock").empty();
-// 	for(var i = 0; i < holder.length; i++) {
-// 		options.push(holder[i]);
-// 	}
-// 	runTimer();
-// 	displayQuestion();
+$("#startOverBtn").on("click", function() {
+	$("#startOverBtn").show();
+	$("#answerblock").empty();
+	$("#questionblock").empty();
+	for(var i = 0; i < holder.length; i++) {
+		options.push(holder[i]);
+	}
+	runTimer();
+	displayQuestion();
 
-// })
 })
+});
