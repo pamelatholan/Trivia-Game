@@ -65,7 +65,7 @@ $(document).ready(function() {
         var correctCount = 0;
         var wrongCount = 0;
         var unansweredCount = 0;
-        var timer = 10;
+        var timer = 15;
         var intervalId;
         var userGuess = "";
         var running = false;
@@ -75,7 +75,7 @@ $(document).ready(function() {
         var newArray = [];
         var holder = [];
     
-        $("#reset").hide();
+    $("#reset").hide();
     
         $("#start").on("click", function() {
             $("#start").hide();
@@ -160,7 +160,7 @@ $(document).ready(function() {
     
             var hidpic = setTimeout(function() {
                 $("#answerblock").empty();
-                timer = 10;
+                timer = 15;
     
                 //Score screen
                 if((wrongCount + correctCount + unansweredCount) === qCount) {
@@ -169,27 +169,28 @@ $(document).ready(function() {
                     $("#answerblock").append("<h4> Correct: " + correctCount + "</h4>");
                     $("#answerblock").append("<h4> Incorrect: " + wrongCount + "</h4>");
                     $("#answerblock").append("<h4> Unanswered: " + unansweredCount + "</h4>");
+                    $("#reset").show();
                     correctCount = 0;
                     wrongCount = 0;
                     unansweredCount = 0;
-    
+         
                 } else {
                     displayQuestion();
                     runTimer();
                 }
             }, 5000);
         }
-    // Could not get the reset function to work
-    // $("#reset").on("click", function() {
-    // 	$("#reset").hide();
-    // 	$("#answerblock").empty();
-    // 	$("#questionblock").empty();
-    // 	for(var i = 0; i < holder.length; i++) {
-    // 		options.push(holder[i]);
-    // 	}
-    // 	runTimer();
-    // 	displayQuestion();
+    // Play Again!
+    $("#reset").on("click", function() {
+        $("#reset").hide();
+        $("#answerblock").empty();
+        $("#questionblock").empty();
+        for(var i = 0; i < holder.length; i++) {
+            options.push(holder[i]);
+        }
+        runTimer();
+        displayQuestion();
     
-    // })
+    })
     })
     
