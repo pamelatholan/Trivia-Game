@@ -89,4 +89,15 @@ h3 {
   background-color: darkgreen;
 }
 
+figcaption {
+  color: gold;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+#audio {
+  text-align: center;
+}
 
