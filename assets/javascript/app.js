@@ -170,6 +170,7 @@ $(document).ready(function() {
                     $("#answerblock").append("<h4> Incorrect: " + wrongCount + "</h4>");
                     $("#answerblock").append("<h4> Unanswered: " + unansweredCount + "</h4>");
                     $("#reset").show();
+                    $("#timeleft").hide()
                     correctCount = 0;
                     wrongCount = 0;
                     unansweredCount = 0;

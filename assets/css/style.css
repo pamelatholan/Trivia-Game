@@ -1,13 +1,11 @@
 .answerchoice {
-  border: 1px solid black;
-  border-radius: 5%;
-	width: 40%;
+  border: 5px solid black;
+	width: 50%;
 	color: gold;
   text-align: center;
   margin: 10px auto;
   font-size: 25px;
   background-color: black;
-
 }
 
 img {
@@ -17,7 +15,6 @@ img {
 
 #answerblock {
   text-align: center;
-
 }
 
 #questionblock {
@@ -26,7 +23,12 @@ img {
 }
 
 body {
-  background-image: url("../images/map.jpg");
+  background-image: 
+  linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  ),
+  url("../images/map.jpg");
   background-size: cover;
   font-family: 'Macondo Swash Caps', cursive;
 }
@@ -34,12 +36,8 @@ body {
 h1 {
   text-align: center;
   color: gold;
-  background: rgba(44, 44, 44, 0.7);
-  border: 2px solid black;
   font-weight: bolder;
-  padding: 20px;
-  margin-left: 500px;
-  margin-right: 500px;
+  padding-top: 20px;
   font-size: 50px;
 }
 
@@ -50,17 +48,22 @@ p {
   font-size: 30px;
 }
 
-h2, h3, h4 {
+h2, h4 {
   margin: 30px;
   font-weight: bold;
   font-size: 25px;
   color: gold;
 }
 
+h3 {
+  margin: 30px;
+  font-weight: bold;
+  font-size: 25px;
+  color: rgb(255, 0, 0);
+}
+
 .wrapper {
   margin: 10px auto;
-  background: rgba(44, 44, 44, 0.7);
-  border: 2px solid black;
   height: 500px;
   width: 60%;
   text-align: center;
@@ -71,6 +74,9 @@ h2, h3, h4 {
   bottom: -200px;
   color: gold;
   font-weight: bold;
+  padding: 0px, 20px, 0px, 20px;
+  font-size: 30px;
+  background-color: darkgreen;
 }
 
 #reset {
@@ -78,6 +84,9 @@ h2, h3, h4 {
   bottom: -100px;
   color: gold;
   font-weight: bold;
+  padding: 0px, 20px, 0px, 20px;
+  font-size: 30px;
+  background-color: darkgreen;
 }
 
 
