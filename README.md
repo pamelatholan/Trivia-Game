@@ -1,6 +1,6 @@
 # Trivia-Game
 
-![LoTR]()
+![LoTR](https://github.com/pamelatholan/Trivia-Game/blob/master/assets/images/LoTR.JPG)
 
 
 Deployed on [GitHub Pages](https://pamelatholan.github.io/Trivia-Game/)
