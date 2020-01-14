@@ -1,5 +1,8 @@
 # Trivia-Game
 
+![LoTR]()
+
+
 Deployed on [GitHub Pages](https://pamelatholan.github.io/Trivia-Game/)
 
 A Lord of the Rings themed timed trivia game.  Answer 10 questions to test your knowledge of LoTR.
