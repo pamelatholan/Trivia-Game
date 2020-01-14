@@ -25,4 +25,3 @@ A Lord of the Rings themed timed trivia game.  Answer 10 questions to test your 
 ### Future Improvements:
 * Mobile responsiveness
 * Add music
-* Make time limit longer
