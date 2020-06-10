@@ -184,6 +184,7 @@ $(document).ready(function() {
     // Play Again!
     $("#reset").on("click", function() {
         $("#reset").hide();
+        $("#timeleft").show()
         $("#answerblock").empty();
         $("#questionblock").empty();
         for(var i = 0; i < holder.length; i++) {
